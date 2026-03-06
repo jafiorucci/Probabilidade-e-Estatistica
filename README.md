@@ -1,5 +1,5 @@
 # Probabilidade-e-Estatistica
-Tutoriais desenvolvidos para a disciplina **Probabilidade e Estatística** (EST0023), oferecida pelo **Departamento de Estatística** (EST) da **Universidade de Brasília** (UnB).
+Tutoriais desenvolvidos para a disciplina **Probabilidade e Estatística (EST0023)**, oferecida pelo **Departamento de Estatística (EST)** da **Universidade de Brasília (UnB)**.
 
 ---
 
