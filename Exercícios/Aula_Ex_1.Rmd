@@ -1,0 +1,138 @@
+---
+title: Aula de Exercícios 1
+institute: |
+        |  Departamento de Estatística
+        |  Universidade de Brasília
+date: 
+fontsize: 10pt
+output: pdf_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(magrittr)
+set.seed(13)
+```
+
+\vspace{-0.3cm}
+
+<!--1) Suponha que uma determinada doença esteja presente em 15\% da população. Suponha que seja coletada uma amostra aleatória de 8 indivíduos dessa população, determine:
+
+  a. a probabilidade de ter pelo menos duas pessoas com a doença
+  
+  b. a variância do número de pessoas doentes na amostra-->
+
+
+<!--Exercício 16 da seção 3.4 do livro do Magalhães-->
+<!--Binomial básico-->
+1) Uma vacina contra a gripe é eficiente em 70% dos casos. Sorteamos, ao acaso, 20 dos pacientes vacinados e pergunta-se a probabilidade de obter:
+
+    a) Pelo menos 18 imunizados.
+
+    b) Mais do que 2 não imunizados.
+
+\vspace{0.3cm}
+
+<!--2) Numa região do DF estima-se que cerca de 20% dos habitantes têm algum tipo de alergia. Sabe-se que 40% dos alérgicos praticam esporte, enquanto que essa porcentagem entre os não alergicos é 50%. Para um indivíduo escolhido aleatoriamente nesta região, obtenha as probabilidades:
+
+  a. não praticar esporte
+
+  a. ser alérgico dado que não pratica esporte-->
+  
+
+<!--Poisson básico-->
+2) Suponha que o número de vendas que um vendedor de telemarketing realiza em um dia é uma variável Poisson com desvio padrão igual a 3. Determine:
+
+    a) qual a média de vendas diárias
+  
+    b) qual a probabilidade de realizar 10 vendas em um dia
+
+
+\vspace{0.3cm}
+
+<!--Geometrica - Falta de memoria - basico-->
+3) A probabilidade de um corretor de imóveis vender um determinado tipo de apartamento em uma visita de um cliente interessado é 30%, independente de outros clientes ou do número de visitas anteriores. Suponha que um desses apartamentos já tenha recebido 2 visitas de interessados, determine a probabilidade desse vendedor ter que ainda mostrar o imóvel para outros 3 clientes para conseguir finalizar a venda.
+
+\vspace{0.3cm}
+
+<!--Hipergeometrica - basico-->
+4) Um grupo de 15 estudantes possui 8 mulheres e 7 homens. Suponha que 5 estudantes desse grupo sejam sorteados aleatoriamente para fazer uma prova, calcule a probabilidade de sair exatamente 4 mulheres.
+
+
+\vspace{0.3cm}
+
+
+<!--Adaptado do exercício 29, página 262, cap. 6, Barry James-->
+<!--Aproximação Binomial pela Poisson-->
+5) Cem mil uvas passas são misturadas em uma massa que posteriormente será dividida
+em partes iguais para fazer vinte mil mini bolos tipo inglês. 
+Mais tarde um bolo será escolhido ao acaso e será contado o número de passas contidas nele.
+
+    a) Qual a distribuição exata do número de passas nesse bolo?
+
+    b) Como ficaria a aproximação pela Poisson?
+
+    c) Utilizando a aproximação pela Poisson, determine a chance de ser encontrado pelo menos 3 passas nesse bolo.
+
+
+\vspace{0.3cm}
+
+<!--Variável aleatóia - basico-->
+6) Seja X uma v.a. discreta com a seguinte f.d.a.
+$$
+F(x) =
+\begin{cases}
+0, ~~ ~~~~x < 1.5
+\\
+0.3,  ~~~~ 1.5 \leq x < 2
+\\
+0.7,  ~~~~ 2 \leq x < 3
+\\
+1, ~~  ~~~~ x \geq 3
+\end{cases}
+$$
+  
+    a) Determine a probabilidade de X ser maior que 2
+  
+    b) Determine o valor esperado de X
+
+
+\vspace{0.3cm}
+
+<!--Exercicio 39 da lista 2-->
+7) Dois gabinetes idênticos em aparência tem duas gavetas. O gabinete A contém uma
+moeda de prata em cada gaveta e o gabinete B contém uma moeda de prata em
+uma das suas gavetas e uma moeda de ouro na outra. Um gabinete foi selecionado
+aleatoriamente, uma de suas gavetas foi aberta, e uma moeda de prata foi encontrada.
+Qual é a probabilidade de que exista uma moeda de prata na outra gaveta?
+
+
+
+
+
+Gabarito
+
+1: a) 0.03549; b) 0.96451; 
+
+2: a) 9; b) 0.11858;
+
+3:  0.147; 
+
+4: 0.16317; 
+
+5: a) Binomial(n=100000, p=1/20000); b) Poisson($\lambda$=5); c) 0.87535; 
+
+6: a) 0.3; b) 2.15;
+
+7: 2/3;
+ 
+
+
+
+
+
+
+
+

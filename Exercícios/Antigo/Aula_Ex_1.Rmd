@@ -1,0 +1,92 @@
+---
+title: Aula de Exercícios 1
+institute: |
+        |  Departamento de Estatística
+        |  Universidade de Brasília
+date: 
+fontsize: 10pt
+output: pdf_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(magrittr)
+set.seed(13)
+```
+
+
+
+1) Suponha que uma determinada doença esteja presente em 15\% da população. Suponha que seja coletada uma amostra aleatória de 8 indivíduos dessa população, determine:
+
+  a. a probabilidade de ter pelo menos duas pessoas com a doença
+  
+  b. a variância do número de pessoas doentes na amostra
+
+\vspace{1cm}
+
+2) Numa região do DF estima-se que cerca de 20% dos habitantes têm algum tipo de alergia. Sabe-se que 40% dos alérgicos praticam esporte, enquanto que essa porcentagem entre os não alergicos é 50%. Para um indivíduo escolhido aleatoriamente nesta região, obtenha as probabilidades:
+
+  a. não praticar esporte
+
+  a. ser alérgico dado que não pratica esporte
+  
+\vspace{1cm}  
+
+3) Suponha que o número de vendas que um vendedor de telemarketing realiza em um dia é uma variável Poisson com desvio padrão igual a 3. Determine:
+
+  a. qual a média de vendas diárias
+  
+  b. qual a probabilidade de realizar 10 vendas em um dia
+
+\vspace{1cm}
+
+4) A probabilidade de um corretor de imóveis vender um determinado tipo de apartamento em uma visita de um cliente interessado é 30%, independente de outros clientes ou do número de visitas anteriores. Suponha que um desses apartamentos já tenha recebido 2 visitas de interessados, determine a probabilidade da venda não ser consolidada antes de 4 visitas.
+
+\vspace{1cm}
+
+5) Um grupo de 10 estudantes possui 3 gênios, suponha que 5 estudantes desse grupo sejam sorteados aleatoriamente para fazer uma prova. Calcule a probabilidade dos 3 gênios estarem entre os sorteados.
+
+
+\vspace{1cm}
+
+6) Seja X uma v.a. discreta com a seguinte f.d.a.
+$$
+F(x) =
+\begin{cases}
+0, ~~ ~~~~x < 1.5
+\\
+0.3,  ~~~~ 1.5 \leq x < 2
+\\
+0.7,  ~~~~ 2 \leq x < 3
+\\
+1, ~~  ~~~~ x \geq 3
+\end{cases}
+$$
+  
+  a. Determine a probabilidade de X ser maior que 2
+  
+  b. Determine o valor esperado de X
+
+
+<!--Exercicio 39 da lista 2-->
+<!--7. Dois gabinetes idênticos em aparência tem duas gavetas. O gabinete A contém uma
+moeda de prata em cada gaveta e o gabinete B contém uma moeda de prata em
+uma das suas gavetas e uma moeda de ouro na outra. Um gabinete foi selecionado
+aleatoriamente, uma de suas gavetas foi aberta, e uma moeda de prata foi encontrada.
+Qual é a probabilidade de que exista uma moeda de prata na outra gaveta?
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+

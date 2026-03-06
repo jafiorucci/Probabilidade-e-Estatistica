@@ -1,0 +1,534 @@
+---
+title: EST0023 - PROBABILIDADE E ESTATÍSTICA
+subtitle: Unidade V - Parte II (Amostragem e TCL)
+author: "José Augusto Fiorucci"
+institute: |
+        |  Departamento de Estatística
+        |  Universidade de Brasília
+date: 
+fontsize: 10pt
+output:
+  beamer_presentation: 
+    colortheme: "default"
+    fonttheme: "default"
+# classoption: "handout" # desativa \pause
+header-includes: 
+    \setbeamercovered{transparent}
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(magrittr)
+set.seed(13)
+```
+
+
+
+
+
+##
+
+\tableofcontents
+
+
+
+
+# Noções de Amostragem
+
+## Amostra aleatória
+
+**Def.:** Uma sequência $X_1,\dots,X_n$ de variáveis aleatórias *independentes e identicamente distribuidas* (i.i.d.) com função de probabilidade (caso discreto) ou função de densidade de probabilidade (caso contínuo) $f(x;\theta)$ é dita ser uma **amostra aleatória** (a.a.) de tamanho "n" da v.a. $X$.
+
+\vspace{0.3cm} \pause
+
+- nesse contexto, a v.a. $X$ faz referência a uma característica populacional.
+
+\vspace{0.3cm} \pause
+
+- $\theta$ denota o vetor de parâmetros desconhecidos relacionados a $X$.
+
+\vspace{0.3cm} \pause
+
+- Como a amostra aleatória $X_1,\dots,X_n$ é i.i.d. então a distribuição conjunta pode ser encontrada facilmente, pois 
+$$
+f(x_1,\dots,x_n;\theta) = f(x_1;\theta)\times f(x_2;\theta)\times \dots \times f(x_n;\theta) = \prod_{i=1}^n f(x_i;\theta)
+$$
+  - OBS: esse resultado é obtido apenas expandindo o conceito de variáveis independentes bidimensionais para o caso n-dimensional;
+
+
+
+
+## Principais medidas descritivas
+
+Seja $X_1, X_2, \dots, X_n$ uma a.a. de tamanho $n$ da v.a. X. Definimos então: \pause
+
+- **Média amostral**: descreve o ponto de equilíbrio da amostra, geralmente denotada com uma barra sobre a variável ($\bar{X}$)
+$$
+\bar{X} = \frac{X_1+X_2+\dots+X_n}{n}
+$$
+\pause 
+
+- **Variância amostral**: descreve o nível de dispersão dos dados em relação a média na escala quadrática, geralmente denotada por $S^2$
+$$
+S^2 = \frac{ (X_1 -\bar{X})^2 + (X_2 -\bar{X})^2 + \dots + (X_n -\bar{X})^2}{n-1} = \frac{1}{n-1} \sum_{i=1}^n (X_i -\bar{X})^2
+$$
+\pause
+
+- **Desvio padrão amostral**: descreve o nível de dispersão dos dados em relação a média na escala original, geralmente denotado por $S$
+
+$$
+S = \sqrt{ \frac{1}{n-1} \sum_{i=1}^n (X_i -\bar{X})^2 }
+$$
+
+
+
+##
+
+- Exemplo: suponha que 7 alunos da turma foram sorteados para formar uma amostra das idades dos alunos e os valores observados foram $20, 19, 21, 23, 22, 18, 20$. Os valores observados então foram:
+
+  \vspace{0.5cm} 
+  - Média amostral: \pause $\bar{x} = 143 / 7 ~~\approx 20.43$ anos
+
+  \vspace{0.5cm} \pause
+  - Variância amostral: 
+  
+  $s^2 =  [~ (-0.43)^2 +(-1.43)^2  +(0.57)^2  +(2.57)^2  +(1.57)^2 +(-2.43)^2 +(-0.43)^2 ~] / 6 ~~ \approx 2.95$ anos$^2$
+
+  \vspace{0.5cm}  \pause
+  - Desvio padrão amostral: $s =  \sqrt{ 2.95 } ~~\approx 1.72$ anos
+ 
+   \vspace{0.5cm}  \pause
+  - Note que, ainda que esses sejam os valores observados dessas medidas para a amostra que foi observada, em um novo sorteio, outros valores poderiam ser encontrados para essas medidas. Ou seja, $\bar{X}, S^2$ e $S$ também são variáveis aleatórias e devemos estudar suas propriedades. 
+
+
+
+
+## Propriedades
+
+Seja $X_1,\dots,X_n$ uma a.a. da v.a. $X$ que possui média $\mu = E[X]$ ("média populacional") e variância $\sigma^2 = Var[X]$ ("variância populacional"), então:
+
+i) O valor esperado da média amostral ($\bar{X}$) é igual ao valor esperado de X:
+$$
+E[\bar{X}] = \mu
+$$
+\pause
+
+ii) A variância da média amostral ($\bar{X}$) é igual a variância de X dividida pelo tamanho da amostra
+$$
+Var[\bar{X}] = \frac{\sigma^2}{n}
+$$
+\pause
+
+iii) O valor esperado da variância amostral ($S^2$) é igual a variância de X
+$$
+E[S^2] = \sigma^2
+$$
+
+
+## Demonstração das propriedades
+
+\small Como $X_1,\dots,X_n$ são i.i.d., segue que:
+
+i) $E[\bar{X}] = E\left [\frac{1}{n}\sum_{i=1}^n X_i \right ] = \pause \frac{1}{n}\sum_{i=1}^n E\left [ X_i \right ]
+= \frac{1}{n}\sum_{i=1}^n \mu = \mu$ \pause
+
+ii) $Var[\bar{X}] = Var\left [\frac{1}{n}\sum_{i=1}^n X_i \right ] =^\text{indep.} \pause\frac{1}{n^2}\sum_{i=1}^n Var\left [ X_i \right ]
+= \frac{1}{n^2}\sum_{i=1}^n \sigma^2 = \frac{\sigma^2}{n}$ \pause
+
+
+iii)
+$\begin{aligned}
+E[S^2] &= E \left [ \frac{1}{n-1} \sum_{i=1}^n (X_i -\bar{X})^2 \right ] 
+= \frac{1}{n-1} \sum_{i=1}^n E \left [ \left [    (X_i -\mu) - ( \bar{X} - \mu)  \right ]^2 \right ]
+\\
+&= \pause \frac{1}{n-1} \sum_{i=1}^n E \left [ (X_i -\mu)^2  -2(X_i -\mu)(\bar{X} -\mu) + (\bar{X} - \mu)^2 \right ]
+\\
+&= \pause \frac{1}{n-1} \sum_{i=1}^n \left [   \underbrace{E \left [ (X_i -\mu)^2 \right ]}_{Var[X_i]=\sigma^2}  -2\,  \underbrace{E \left [ (X_i -\mu)(\bar{X} -\mu)\right ]}_{\frac{1}{n}Cov(X_i, X_i) =\sigma^2/n} +  \underbrace{E \left [ (\bar{X} -\mu)^2 \right ]}_{Var[\bar{X}]=\sigma^2/n} \right ]
+\\
+&= \pause \frac{1}{n-1} \sum_{i=1}^n \left [ \frac{(n-1)}{n} \sigma^2 \right ]
+\\
+&=\pause \sigma^2
+\end{aligned}$
+
+
+## Exemplo
+
+**Exemplo (controle de qualidade, 6 sigma):** uma máquina deve encher latas de tinta com média de 128 onças e desvio padrão de 0.2 onças. Em um teste com 40 latas amostradas aleatoriamente, foi encontrado média amostral igual a 127.5 onças. Considerando 3 desvios padrões de tolerância para a média amostral, verifique se a maquina esta operando de modo adequado.
+
+\small \pause
+
+Solução:
+
+- Para 1 lata (X): 
+  - Média teórica: $\mu = 128$
+  - Variância teórica: $\sigma^2 = 0.2^2=0.04$ \pause
+
+- Para a média de 40 latas ($\bar{X}$): 
+  - Média teórica: \pause $\mu_{\bar{X}} = 128$ \pause
+  - Variância teórica: \pause $\sigma^2_{\bar{X}} = \frac{\sigma^2}{n}=\frac{0.04}{40}=0.001$ \pause
+  - Desvio padrão teórico: $\sigma_{\bar{X}} = \sqrt{0.001} = 0.0316$  \pause
+
+- Tolerância para $\bar{X}$: \pause $\mu_{\bar{X}} \pm 3\,\sigma_{\bar{X}} = (127.905, 128.095)$ \pause
+
+- Conclusão:  como a média observada $127.5$ esta fora da tolerância, então a máquina deve ser reajustada.
+
+
+# Distribuição da média amostral e distribuição da soma amostral
+
+
+## Média de Normais
+
+Como consequência direta das propriedades de "soma de normais" e "transmormação linear de normais", ambas vistas na Unidade IV, temos o seguinte teorema:
+\vspace{0.5cm} \pause
+
+- **Teorema:** Seja $X_1,\dots,X_n$ uma a.a. da v.a. $X \sim Normal(\mu, \sigma^2)$, então a média amostral também tem distribuição normal, isto é,
+$$
+\bar{X} =  \left ( \frac{1}{n} \sum_{i=1}^n X_i \right ) \sim Normal(\, \mu_{\bar{X}} \,;\, \sigma^2_{\bar{X}} \, ),
+$$
+em que $\mu_{\bar{X}}=\mu$ e $\sigma^2_{\bar{X}}= \sigma^2\,/\,n$.
+
+\vspace{0.5cm} \pause
+
+- Resulta desse teorema que:
+$$
+Z =  \left ( \frac{\bar{X} - \mu}{\sigma / \sqrt{n}}  \right ) \sim Normal(0\, ;\, 1)
+$$
+
+
+## Soma de Normais
+
+**Teorema:** Seja $X_1,\dots,X_n$ uma a.a. da v.a. $X \sim Normal(\mu, \sigma^2)$, então a soma amostral também tem distribuição normal, isto é,
+$$
+S_n =  \left ( \sum_{i=1}^n X_i \right ) \sim Normal( n\, \mu ~,~ n\, \sigma^2).
+$$
+\vspace{0.4cm} \pause
+
+- **Obs (visto na Unidade IV): ** um resultado ainda mais geral que pode ser demostrado é que a soma de v.a.'s Normais sempre é Normal. Em particular, seja $X_1, X_2, \dots, X_n$ variáveis aleatórias independentes com distribuição de probabilidade Normal, com as respectivas médias $\mu_1, \mu_2,\dots,\mu_n$ e respectivas variâncias $\sigma_1^2, \sigma_2^2,\dots,\sigma_n^2$, então 
+$$
+S_n =  \left ( \sum_{i=1}^n X_i \right ) \sim Normal(\mu_1+\mu_2+\dots+\mu_n ~,~ \sigma_1^2+ \sigma_2^2+\dots+\sigma_n^2)
+$$
+
+
+
+
+
+## Teorema do Limite Central (TCL)
+
+- Os resultados dos slides anteriores estão limitados a quando a amostra aleatória é originada de uma v.a. com distribuição Normal. No entanto, felizmente, pode-se mostrar que para amostras "suficientemente grandes", a distribuição de probabilidade da média amostral (e também da soma amostral) pode ser aproximada por uma distribuição Normal. 
+\vspace{0.5cm}\pause
+
+- Este fato, é um dos teoremas mais importantes da Estatística e é denominado **Teorema do Limite Central (TCL)**.
+\vspace{0.5cm} \pause
+
+- Neste caso, dizemos que a Normal é a distribuição assintótica (válida quando $n \rightarrow \infty$); 
+ 
+
+
+## Teorema do Limite Central (TCL)
+
+\large
+
+**Teorema do Limite Central:** Seja $X_1,\dots,X_n$ uma a.a. retirada de uma população com média $\mu$ e variância $\sigma^2$, então 
+
+i) $\bar{X} =  \left ( \frac{1}{n} \sum_{i=1}^n X_i \right ) ~~\sim^{a}~ Normal(\,\mu ~;~  \sigma^2/n\,)$;
+
+
+ii) $S_n =  \left ( \sum_{i=1}^n X_i \right ) ~~\sim^{a}~ Normal(\,n\mu ~;~  n\sigma^2\,)$.
+
+
+ \vspace{0.8cm} \pause
+
+- **Proposição:** Segue diretamente do teorema que
+
+  i) $Z =  \left ( \frac{\bar{X} -\mu}{\sigma / \sqrt{n}} \right ) ~~\sim^{a}~ Normal(\,0 ~;~  1\,)$;
+
+  ii) $Z =  \left ( \frac{S_n - n\mu}{\sqrt{n}\,\sigma} \right ) ~~\sim^{a}~ Normal(\,0 ~;~  1\,)$.
+
+
+
+## Teorema do Limite Central (TCL)
+
+\large
+
+- Quanto maior o tamanho da amostra, melhor é a aproximação; \vspace{0.5cm} \pause
+
+- Estudos de simulação indicam que a aproximação é boa, na maior parte dos casos, já a partir de $n=30$;   
+
+
+
+
+
+
+
+
+
+
+## Exemplo
+
+Seja X: "o peso em kg de alunos homens de um escola". Suponha que não conhecemos a distribuição de X, mas sabemos que a média é $\mu=E[X]=70~kg$ e a variância $\sigma^2=Var[X]=16~kg^2$. Se selecionado aleatoriamente um grupo de 36 alunos, qual a probabilidade da média amostral ser maior que 71 kg? \pause
+
+Solução:
+
+- Pelo Teorema do limite central
+
+$$Z = \pause \left ( \frac{\bar{X} -\mu}{\sigma / \sqrt{n}} \right ) = \pause\left ( \frac{\bar{X} -70}{4 / 6} \right ) ~~\sim^{a}~ Normal(\,0 ~,~  1\,) \pause$$
+
+- Então
+$$
+\begin{aligned}
+P(\bar{X} > 71) &= \pause P \left ( \frac{\bar{X} -70}{4 / 6} > \frac{71 -70}{4 / 6} \right ) 
+\\ \pause
+&=  P(Z>1.5) \pause =    ~1- P(Z<1.5) \pause =  ~ 1 - \Phi(1.5)
+\\ \pause
+&=  1 - 0.93319 =~ 0.06681
+\end{aligned}
+$$
+
+
+## Exercício
+
+\large
+
+Nas condições do exemplo do slide anterior determine a probabilidade da soma ser maior que 2500 kg.
+
+
+\vspace{0.5cm}
+
+- Resposta: 0.79673
+
+
+
+# Aproximação da Binomial pela Normal
+
+## Aproximação da Binomial pela Normal
+
+\large
+
+Seja $Y \sim Binomial(n, p)$, logo
+$$
+E[Y] = n p ~~\text{  e  }~~ Var[Y]=n\,p\,(1-p)
+$$
+Também sabemos que por definição $Y$ consiste na soma de "n" v.a.'s independentes com distribuição de Bernoulli(p), isto é,
+$$
+Y = X_1+X_2+\dots+X_n
+$$
+em que $X_1,\dots,X_n$ são i.i.d. com $X_i \sim Bernoulli(p)$.
+
+
+## Aproximação da Binomial pela Normal
+
+\large
+
+Assim para "$n$" suficientemente grande, o teorema do limite central afirma que
+$$
+Y \sim^a Normal(np ~,~  n\,p\,(1-p))
+$$
+ou equivalentemente,
+$$
+Z =  \left ( \frac{Y - np}{\sqrt{n\,p\,(1-p)}} \right ) ~~\sim^{a}~ Normal(\,0 ~,~  1\,)
+$$
+
+\vspace{0.5cm} \pause
+
+- OBS: essa aproximação pode não ser adequada para valores extremos de $p ~(p\approx 0 \text{ ou } p\approx 1)$, especialmente se $n$ não for muito grande. 
+
+
+## Exemplo
+
+\large
+
+Estudos indicam que 30\% dos funcionários de bancos sofrem com altos níveis de estresse. Numa amostra aleatória de 200 bancários, qual a probabilidade de encontrar 50 ou mais com esse problema?
+
+\normalsize \pause \vspace{0.3cm}
+
+Solução:
+
+- Seja X o número de funcionários com o problema na amostra, logo
+$$
+X \sim Binomial(n=200,~ p=0.3)
+$$
+e portanto,
+$P[X=x] = {n \choose x} p^x (1-p)^{(n-x)} = {200 \choose x} 0.3^x \,0.7^{200-x}$.
+
+\pause \vspace{0.3cm}
+
+- Cálculo via a Binomial:
+$$
+P[X \geq 50] = \sum_{k=50}^{200} {200 \choose k} \,0.3^k \,0.7^{200-k}~~~~ \text{ (difícel de ser calculado)} 
+$$
+
+
+## Exemplo - continuação
+
+\large
+
+- Cálculo via TCL:
+
+  - Média: $E[X] = n\,p = \pause 200*0.3 = 60$  \pause 
+    
+  - Variância:  $Var[X] = n\,p\,(1-p) = \pause 200*0.3*0.7 = 42$ \pause
+  
+  - Aproximação:  
+$\begin{aligned}
+P(X \geq 50) &= \pause P \left ( \frac{X -60}{ \sqrt{42}} \geq \frac{50 -60}{\sqrt{42}} \right ) 
+\\
+&= \pause P(Z \geq -1.54)
+\\
+&= \pause ~P(Z \leq 1.54) 
+\\
+&= \pause \Phi(1.54) =~ 0.93822
+\end{aligned}$
+
+
+
+
+
+# Distribuição da proporção amostral
+
+## Distribuição da proporção amostral
+
+\large
+
+- Considere uma população em que a **proporção** de indivíduos com certa característica é $p$. 
+\vspace{0.3cm} \pause
+
+- Seja $X$ a v.a. que indica se um indivíduo qualquer possue essa característica, logo
+$$
+X ~\sim~ Bernoulli(p)
+$$
+e sabemos que $E[X]=p$ e $Var[X]= p (1-p)$.
+
+
+##  Distribuição da proporção amostral
+
+- Em uma amostra aleatória $X_1,\dots,X_n$ dessa população, seja $\hat{p}$ a proporção amostral dos indivíduos com essa característica, logo
+$$
+\hat{p} = \frac{X_1+\dots+X_n}{n} = \bar{X}
+$$
+ou seja, a proporção amostral corresponde a média amostral de variáveis Bernoullis $\hat{p} = \bar{X}$. 
+Logo,
+\vspace{0.2cm}
+
+  - a média da proporção amostral é dada por
+$$
+E[\hat{p}] = E[\bar{X}] = E[X] = p
+$$
+
+  - a variância da proporção amostral é dada por
+$$
+Var[\hat{p}] = Var[\bar{X}] = \frac{Var[X]}{n} = \frac{p (1-p)}{n}
+$$
+
+
+
+## Distribuição da proporção amostral
+
+\large
+
+- Pelo TCL, temos então
+$$
+\hat{p} ~~\sim^a~~ Normal(\, p ~,~  p (1-p)/n\,)
+$$
+ou equivalentemente,
+$$
+Z =  \left ( \frac{\hat{p} - p}{\sqrt{p (1-p)/n\,}} \right ) ~~\sim^{a}~ Normal(\,0 ~,~  1\,)
+$$
+
+
+## Exemplo
+
+\large
+Suponha que 60\% da população de uma cidade seja a favor da criação de um fundo público para fins de instalação de uma área de lazer. Se 150 pessoas são selecionadas aleatoriamente, qual a probabilidade de que a proporção amostral seja inferior a 52\%?
+
+
+
+Solução: \pause
+
+- Primeiramente note que a proporção populacional é $p=0.6$  \pause
+
+- Denotemos por $\hat{p}$ a proporção amostral (percentual de pessoas dentro da amostra que são favoráveis) \pause
+
+  - Média: $E[\hat{p}] = \pause p =0.6$ \pause
+
+  - Variância: $Var[\hat{p}] = \pause p (1-p)/n = 0.6*0.4/150=0.0016$ \pause
+
+
+## Exemplo - continuação
+
+\large
+
+- Aproximação via TCL:
+  $$
+  \begin{aligned}
+  P( \hat{p} < 0.52) &= \pause P \left ( \frac{\hat{p} -0.6}{ \sqrt{0.0016}} < \frac{0.52 -0.6}{ \sqrt{0.0016}} \right ) 
+  \\ 
+  &= \pause P(Z < -2) 
+  \\ 
+  &= \pause \Phi(-2) 
+  \\ 
+  &=  \pause  1 - \Phi(2) 
+  \\
+  &=  \pause  1-0.97725 = 0.02275
+  \end{aligned}
+  $$
+
+
+
+
+
+
+## Exemplo
+
+\large
+
+Suponha que $p=30\%$ dos estudantes de uma escola sejam mulheres. Em uma a.a. de 30 alunos, considere $\hat{p}$ como sendo a proporção de mulheres, então determine utilizando TCL qual a probabilidade de que $\hat{p}$ difira de $p$ em menos que 0.01.
+
+
+
+Solução:  \pause
+
+- primeiramente note que $Var[\hat{p}] = p (1-p)/n = 0.3*0.7/30= 0.007$, 
+
+
+
+## Exemplo - continuação
+
+\large
+
+- Utilizando o TCL:
+$$
+\begin{aligned}
+P(|p-\hat{p}| < 0.01) &= \pause P( -0.01 < p-\hat{p} < 0.01)
+\\
+&=  \pause  P \left ( \frac{-0.01}{\sqrt{0.007}} < \frac{p-\hat{p}}{\sqrt{0.007}} < \frac{0.01}{\sqrt{0.007}} \right )
+\\
+&=   \pause P \left ( -0.12 < Z < 0.12 \right )
+\\
+&=   \pause P \left ( Z < 0.12 \right ) - P \left ( Z < -0.12 \right )
+\\
+&=  \pause \Phi(0.12) - \Phi(-0.12)
+\\
+&=  \pause \Phi(0.12) - [1 - \Phi(0.12)]
+\\
+&=  \pause 2 \,\Phi(0.12) - 1
+\\
+&= 2*0.54776-1
+\\
+&= 0.09552
+\end{aligned}
+$$
+
+
+
+
+
+
+
+
+
+
+
+

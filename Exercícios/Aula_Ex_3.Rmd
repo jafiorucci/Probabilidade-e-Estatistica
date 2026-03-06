@@ -1,0 +1,116 @@
+---
+title: Aula de Exercícios 3
+institute: |
+        |  Departamento de Estatística
+        |  Universidade de Brasília
+date: 
+fontsize: 11pt
+output: pdf_document
+---
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+require(magrittr)
+set.seed(13)
+```
+
+
+
+
+
+1) Uma prefeitura afirma que o gasto médio anual de energia de ar condicionado por residência é de 
+11,3 kWh com desvio padrão de 3 kWh. 
+Uma amostra aleatória de 64 casas indicou que os ar condicionados gastaram
+em média 10,5 kWh por ano. 
+Com
+base nas informações, determine:
+
+a) qual o teste adequado para verificar a afirmação da prefeitura;
+
+b) considere 3% de significância, verifique o resultado pela estatística do teste;
+
+c) repita o teste do b) item pelo p-valor;
+
+\vspace{0.5cm}
+
+2) Numa região do DF acredita-se que pelo menos 20% dos habitantes sofre de algum 
+transtorno respiratório relacionado a baixa umidade do ar. 
+Uma amostra com 200 pessoas residentes dessa região revelou 30 pessoas com esse 
+transtorno. Com base nas informações, determine:
+
+a) qual o teste adequado para verificar a afirmação;
+
+b) considere 5% de significância, verifique o resultado pela estatística do teste;
+
+c) repita o teste do b) item pelo p-valor;
+
+\vspace{0.5cm}
+
+3) Sabe-se que um indicador de saúde quando aplicado a homens na 
+faixa de idade de 30-40 anos possui distribuição de probabilidade normal. 
+Uma amostra aleatório com 23 homens dessa faixa de idade apresentou resultado médio 
+igual a 25 $kg/m^2$ com variância de 9 $kg^2/m^4$. Com base nessas informações 
+calcule o intervalo de confiança para a média com 98\% de probabilidade.
+
+\vspace{0.5cm}
+
+4) Suponha que o número de vendas que um vendedor de telemarketing realiza em um 
+dia seja denotado por X, o qual possui a seguinte distribuição de probabilidade
+$$
+P[X=x] = \frac{\theta^x}{x!}\,e^{-\theta},~~~~x=0,1,2,3,\dots
+$$
+em que $\theta>0$ é um parâmetro.
+Sabendo que uma amostra aleatória de X apresentou os valores 5, 8, 3, 2 e 6, determine qual a estimativa de máxima verossimilhança de $\theta$. 
+
+\vspace{0.5cm}
+
+5) Um estudo deseja estimar a proporção de brasileiros que são 
+contrários a utilização de dinheiro público para o financiamento de campanhas 
+eleitorais que ultrapassem 1 bilhão de reais no total.
+Para tal, foi realizado uma pesquisa preliminar que apontou que esse percentual 
+gira em torno de 90\% da população.
+Qual deve ser o
+tamanho mínimo da amostra para construir um intervalo de confiança de 95% para essa porporção, de modo que a margem de erro não ultrapasse 1.5 pontos percentuais? 
+
+
+
+
+<!-- 1) Suponha que a concentração de uma certa substância no -->
+<!-- sangue, medida em mg/ml, siga a distribuição normal. -->
+<!-- Indivíduos saudáveis têm concentração média de 25mg/ml -->
+<!-- enquanto indivíduos acometidos por uma doença têm -->
+<!-- concentração média aumentada para 30mg/ml. Uma nova droga -->
+<!-- está sendo testada em 15 pacientes portadores da doença e, após -->
+<!-- a administração do medicamento, a concentração média desses -->
+<!-- 15 pacientes era de 26,5mg/ml com desvio padrão igual a 2.1mg/ml.  -->
+<!-- A um nível de significância de -->
+<!-- 5%, o que podemos concluir sobre a eficiência desse -->
+<!-- medicamento? -->
+
+<!-- \vspace{1cm} -->
+
+
+
+<!-- 6) A probabilidade de um corretor de imóveis vender um determinado tipo de apartamento em uma visita de um cliente interessado é 30%, independente de outros clientes ou do número de visitas anteriores. Suponha que um desses apartamentos já tenha recebido 2 visitas de interessados, determine a probabilidade da venda não ser consolidada antes 4 visitas. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
