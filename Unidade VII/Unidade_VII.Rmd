@@ -31,7 +31,9 @@ set.seed(13)
 
 
 
+##
 
+\tableofcontents
 
 
 
@@ -1255,7 +1257,7 @@ $$
     
   - Teste via Região Crítica para $z_0$ (rejeita $H_0$ se $z_0< -z_{1-\alpha}$):
   
-    - Como $|z_0| = 2.18$ é maior que $-z_{1-\alpha} = -1.88$, **não  rejeitamos** $H_0$; 
+    - Como $z_0 = 2.18$ é maior que $-z_{1-\alpha} = -1.88$, **não  rejeitamos** $H_0$; 
     \vspace{0.4cm} \pause
     
 
@@ -1319,7 +1321,7 @@ $$
     
   - Teste via Região Crítica para $z_0$ (rejeita $H_0$ se $z_0> z_{1-\alpha}$):
   
-    - Como $|z_0| = 2.18$ é maior que $z_{1-\alpha} = 1.88$, **rejeitamos** $H_0$; 
+    - Como $z_0 = 2.18$ é maior que $z_{1-\alpha} = 1.88$, **rejeitamos** $H_0$; 
     \vspace{0.4cm} \pause
 
   - Teste via p-valor: (rejeita $H_0$ se $\text{p-valor} < \alpha$):
@@ -1396,4 +1398,96 @@ $$
   -->
  
 
+# Testes de Hipóteses para Duas Populações (Introdução)
+
+## Testes para duas populações
+
+Em muitas aplicações, o interesse está em comparar dois grupos distintos:
+
+- Salário médio entre homens e mulheres;
+- Desempenho de duas metodologias de ensino;
+- Efeito de dois tratamentos médicos;
+- Taxa de aprovação em duas turmas.
+
+\vspace{0.4cm}
+
+Os testes para duas populações seguem a mesma lógica dos testes para uma população:
+
+1) Formular $H_0$ e $H_1$;
+2) Construir uma estatística de teste;
+3) Decidir o nível de significância do teste;
+4) Decidir sobre $H_0$.
+
+
+## Exemplo: Médias de duas populações
+
+- Considere duas amostras independentes obtidas de duas populações:
+
+  - $X_{1},\ldots,X_{n_1}$ a.a. de $X$ em que $\mu_1 = E[X]$ e $\sigma_1^2 = Var[X]$ (desconhecida);
+
+  - $Y_{1},\ldots,Y_{n_2}$ a.a. de $Y$ em que $\mu_2 = E[Y]$ e $\sigma_2^2 = Var[Y]$ (desconhecida);
+
+com médias amostrais $\bar X$ e $\bar Y$ e variâncias amostrais $s_1^2$ e $s_2^2$.
+
+
+- Possíveis Hipóteses:
+
+  a) Bilateral
+$$
+\begin{cases}
+H_0: \mu_1-\mu_2=0
+\\
+H_1: \mu_1-\mu_2 \neq 0
+\end{cases}
+$$
+
+  b) Unilateral à direita
+$$
+\begin{cases}
+H_0: \mu_1-\mu_2 \leq 0
+\\
+H_1: \mu_1-\mu_2 > 0
+\end{cases}
+$$
+  c) Unilateral à esquerda
+$$
+\begin{cases}
+H_0: \mu_1-\mu_2 \geq 0
+\\
+H_1: \mu_1-\mu_2 < 0
+\end{cases}
+$$
+
+##
+
+- Assumindo variâncias populacionais desconhecidas, utiliza-se a estatística:
+$$
+T=
+\frac{(\bar X-\bar Y)-(\mu_1-\mu_2)}
+{\sqrt{\dfrac{s_1^2}{n_1}+\dfrac{s_2^2}{n_2}}}.
+$$
+
+- Sob $H_0$, temos $(\mu_1-\mu_2)=0$. Logo, a estatística do teste é dada por:
+$$
+T_0=
+\frac{\bar X-\bar Y}
+{\sqrt{\dfrac{s_1^2}{n_1}+\dfrac{s_2^2}{n_2}}}.
+$$
+
+- Pode-se mostrar que essa estatística possui aproximadamente distribuição t-Student (aproximação de Welch), em que os graus de liberdade são dados por:
+$$
+\nu=
+\frac{(a+b)^2}
+{\dfrac{a^2}{n_1-1}+\dfrac{b^2}{n_2-1}},
+$$
+com $a=s_1^2/n_1$ e $b=s_2^2/n_2$.
+
+##
+
+- Com isto, a execução do teste ocorre da mesma forma como vimos para o caso com apenas uma população:
+
+  1) Escolhe o nível de significância $\alpha$;
+  2) Calcula a estatística do teste $t_0$;
+  3) Obtem a região crítica ou calcula o p-valor;
+  4) Decide sobre $H_0$.
 
