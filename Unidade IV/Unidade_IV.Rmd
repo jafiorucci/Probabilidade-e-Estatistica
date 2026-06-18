@@ -11,7 +11,7 @@ output:
   beamer_presentation: 
     colortheme: "default"
     fonttheme: "default"
-#classoption: "handout" # desativa \pause
+# classoption: "handout" # desativa \pause
 header-includes: 
     \setbeamercovered{transparent=10}    
 editor_options: 
@@ -107,49 +107,65 @@ $$
     \frac{d}{dx} F(x) = f(x)
     $$
 
-## Média e Mediana
+## Média e média de função
 
 **Def.:** O **valor esperado** (ou média) de uma v.a. contínua X é dado
-pela seguinte expressão: $$
-E[X] =  \int_{-\infty}^\infty x\,f(x)\, dx
+pela seguinte expressão: 
+$$
+E[X] =  \int_{-\infty}^\infty x\,f(x)\, dx.
 $$ \pause
 
 -   Geralmente denotamos $\mu = E[X]$ \pause
 
-\vspace{0.5cm}
+\vspace{0.8cm}
+
+**Def.:** O **valor esperado de uma função** $g(X)$ é dado
+pela seguinte expressão: 
+$$
+E[ g(X) ] =  \int_{-\infty}^\infty g(x) \,f(x)\, dx.
+$$ 
+
+
+## Mediana
 
 **Def.:** A **mediana** de uma v.a. contínua X é o valor $Md$ que divide
 $50\%$ para cada lado, i.e., 
 $$
-P[X \leq Md] = 0.5 \text{  e  } P[X \geq Md] = 0.5
-$$ ou simplesmente, $$Md = F^{-1}(0.5)$$.
+P[X \leq Md] = 0.5 \text{  e  } P[X \geq Md] = 0.5,
+$$ 
+ou simplesmente, $$Md = F^{-1}(0.5)$$.
+
 
 ## Variância e desvio padrão
 
 **Def.:** A **variância** de uma v.a. contínua X é dado pela seguinte
 expressão: 
 $$
-Var[X] =  \int_{-\infty}^\infty (x-\mu)^2\,f(x)\, dx
-$$ em que $\mu = E[X]$.
+Var[X] =  \int_{-\infty}^\infty (x-\mu)^2\,f(x)\, dx,
+$$ 
+em que $\mu = E[X]$.
 
 \vspace{0.2cm} \pause
 
--   Assim como para v.a. discretas, temos $$
-      Var[X] = E[X^2] - E[X]^2
-    $$ \pause
+-   Assim como para v.a. discretas, temos 
+$$
+      Var[X] = E[X^2] - E[X]^2.
+$$ \pause
 
--   Geralmente denotamos $\sigma^2 = Var[X]$ \pause
+-   Geralmente denotamos $\sigma^2 = Var[X]$. \pause
 
 \vspace{0.5cm}
 
 **Def.:** O **desvio padrão** de uma v.a. contínua X é dado pela seguinte
-expressão: $$
-DP[X] = \sqrt{Var[X]}
+expressão: 
+$$
+DP[X] = \sqrt{Var[X]}.
 $$
 
 ## Exemplo
 
-**Exemplo:** Considere $$
+**Exemplo:** Considere 
+$$
 f(x) = 
 \begin{cases}
 x/6,~~  2 < x < 4
@@ -158,11 +174,11 @@ x/6,~~  2 < x < 4
 \end{cases}
 $$
 
-a)  Verifique que $f(x)$ é uma f.d.p.
+a)  Verifique que $f(x)$ é uma f.d.p.;
 
-b)  Obtenha a f.d.a
+b)  Obtenha a f.d.a.;
 
-c)  Calcule o valor esperado, mediana, variância e desvio padrão
+c)  Calcule o valor esperado, mediana, variância e desvio padrão.
 
 \pause
 
@@ -223,8 +239,9 @@ c)  .
 \small
 
 **Exercício:** A quantia gasta anualmente, em milhões de reais, na
-manutenção do asfalto em uma cidade é representada pela variável Y que
-possui a seguinte f.d.a. $$
+manutenção do asfalto em uma cidade é representada pela variável $Y$ que
+possui a seguinte f.d.a.: 
+$$
 F(y) = 
 \begin{cases}
 0 ~~~~~~~~~~~~~~~~~~~~~~~~, ~~ y < 0.5
@@ -238,8 +255,8 @@ $$
 obtenha:
 \small
 
-a)  A f.d.p. de $Y$
-b)  A probabilidade do gasto total ser menor que 1.2 milhoes e a média de gastos
+a)  A f.d.p. de $Y$;
+b)  A probabilidade do gasto total ser menor que 1.2 milhoes e a média de gastos;
 c)  A probabilidade de no ano atual ser gasto mais que 1.5 milhões,
     sabendo que já foi gasto 1 milhão. \pause
 
@@ -257,6 +274,61 @@ c)  A probabilidade de no ano atual ser gasto mais que 1.5 milhões,
     b)  $P[Y < 1.2] \approx 0.218,~~ E[Y] = 1.5$
 
     c) $P[Y > 1.5 | Y> 1 ] \approx 0.625$
+    
+    
+    
+# Distribuição de uma Função de Variável Aleatória
+
+## Distribuição de uma Função de Variável Aleatória
+
+Seja
+$$
+Y = g(X),
+$$
+em que conhecemos a distribuição de \(X\) e queremos encontrar a distribuição de \(Y\). 
+
+Vamos assumir que $g$ é uma função monótona no suporte de $X$. \pause
+\vspace{0.2cm}
+
+- Estratégia:
+
+  - **Passo 1**. Escrever a FDA de $Y$ em função da FDA de $X$ (para facilitar a exposição, suponha que $g$ seja crescente):
+$$
+F_Y(y) = P(Y\le y) = P( g(X) \le y) = P( X \le g^{-1}(y) )  = F_X ( g^{-1}(y) );
+$$
+\pause
+  - **Passo 2**. Derivamos \(F_Y(y)\) para obter \(f_Y(y)\):
+$$
+f_Y(y) = \frac{d}{dy} F_Y(y).
+$$
+Aplicando a regra da cadeia (o valor absoluto é necessário para incluir o caso decrescente):
+$$
+f_Y(y) = f_X ( g^{-1}(y) ) \left | \frac{d}{dy}  g^{-1}(y) \right |.
+$$
+
+
+## Exemplo
+
+Seja a variável aleatória \(X\) com FDA:
+$$F_X(x)=x, \quad 0 < x < 1,$$
+então encontre a f.d.p. de $Y = X^2$.
+\vspace{0.2cm}
+\pause
+
+**Solução:**
+
+- **Passo 1**. Encontrar a FDA de \(Y\):
+$$
+F_Y(y) = P(Y\le y) = P(X^2 \le y) = P(X \le \sqrt y) = F_X(\sqrt y) = \sqrt y
+$$
+para \(0 < y < 1\). \pause
+
+- **Passo 2**. Derivar a FDA:
+$$
+f_Y(y) = \frac{d}{dy}F_Y(y) = \frac{d}{dy}\sqrt y = \frac{1}{2\sqrt y}
+$$
+para \(0 < y < 1\).
+
 
 ## Modelos probabilísticos para v.a. contínuas
 
@@ -505,7 +577,29 @@ P[T > 20000 | Y> 12000] \pause &=^{(P.M)} P[T > 8000] \pause
 \end{aligned}
 $$
 
+## Exemplo 2
 
+Se $X \sim Uniforme(0, 1)$, qual a distribuição de $Y = -\log(X)$?
+
+- Lembrete: Como $X \sim Uniforme(0, 1)$, então $F_X(x) = x,~\forall x \in (0, 1)$.
+
+\vspace{0.5cm}
+
+\pause
+
+**Solução:**
+Para $y>0$, note que:
+$$
+\begin{aligned}
+F_Y(y) &= P(Y < y) \\ \pause
+       &= P(-\log(X) \le y)\\ \pause
+       &= P(X \ge e^{-y})\\  \pause
+       &= 1 - P(X < e^{-y})\\ \pause
+       &= 1 - F_X( e^{-y} )\\ \pause
+       &=  1 - e^{-y}. \pause
+\end{aligned}
+$$
+Logo $Y \sim Exp(1)$, i.e., $Y$ tem distribuição Exponencial com parâmetro $\lambda=1$.
 
 
 
