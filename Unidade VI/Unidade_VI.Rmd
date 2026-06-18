@@ -343,7 +343,7 @@ $$
 $$
 \pause
 
-\vspace{0.5cm} $~~~~~~~~$ *verossímil: aquilo que é possível ou provável por não contrariar a verdade; plausível.*
+\vspace{0.5cm} $~~~~~~~~$ **Dicionário:** *verossímil é aquilo que parece verdadeiro, que é plausível. O termo indica que algo faz sentido e é coerente com a lógica, mesmo que não seja um fato comprovado.*
 
 
 ## Estimador de Máxima Verossimilhança
