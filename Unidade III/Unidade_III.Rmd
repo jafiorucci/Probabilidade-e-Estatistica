@@ -187,9 +187,9 @@ A função de distribuição acumulada (f.d.a) possui as seguintes propriedades:
   
 ## Valor esperado (média)
 
-**Def.:** o **valor esperado** ou valor médio de uma v.a. discreta X que assume os possíveis valores $x_1, x_2,\dots$ é definido como
+**Def.:** o **valor esperado** ou valor médio de uma v.a. discreta X que assume os possíveis valores $x_1, x_2,\dots$ é definido como:
 $$
-E[X] = \sum_{i=1}^\infty x_i \,P(x_i)
+E[X] = \sum_{i=1}^\infty x_i \,P(x_i).
 $$
 
 
@@ -200,9 +200,9 @@ $$
   
 ## Variância e desvio padrão
 
-**Def.:** a **variância** de uma v.a. discreta X que assume os possíveis valores $x_1, x_2,\dots$ é definida como
+**Def.:** a **variância** de uma v.a. discreta X que assume os possíveis valores $x_1, x_2,\dots$ é definida como:
 $$
-Var[X] = \sum_{i=1}^\infty (x_i-\mu)^2 \,P(x_i)
+Var[X] = \sum_{i=1}^\infty (x_i-\mu)^2 \,P(x_i),
 $$
 em que $\mu = E[X]$. O desvio padrão é a raiz quadrada da variância, isto é, $DP(X) = \sqrt{Var[X]}$.
 
@@ -256,17 +256,17 @@ $$
   
 ## Exercício:
 
-**Exercício:** Para um sorteio de 4 prêmios nos valores de \$500.00, \$250.00, \$150.00 e \$75,00 são vendidos 1500 bilhetes por \$2.00 cada um. Imagine que você compre um bilhete, qual é o retorno financeiro esperado desse investimento (desconte o valor investido)?
+**Exercício:** Para um sorteio de 4 prêmios nos valores de R\$500.00, R\$250.00, R\$150.00 e R\$75,00 são vendidos 1500 bilhetes por R\$2.00 cada um. Imagine que você compre um bilhete, qual é o retorno financeiro esperado desse investimento (desconte o valor investido)?
 \pause
 
-- Resposta: \$ -1.35, ou seja, o retorno esperado é perder \$ -1.35, o que corresponde a perder -67.5\% do valor investido.
+- Resposta: R\$ -1.35, ou seja, em média seria perdido R\$ 1.35, o que corresponde a perder 67.5\% do valor investido.
 
 
 ## Definição
 
 **Def.:** Dado uma variável aleatória X e a respectiva função de probabilidade $P(x)$, então o valor esperado de uma função real h(X) é
 $$
-E[h(X)] = \sum_{i=1}^\infty h(x_i) P(x_i)
+E[h(X)] = \sum_{i=1}^\infty h(x_i) P(x_i).
 $$
 \pause
 
@@ -288,9 +288,9 @@ Obs.: como $\mu = E[X]$ é uma constante, segue da definição que $Var[X] = E[ 
   
 1) Se $a$ e $b$ são constantes, então
 
-a) $E[aX+b] = a E[X] + b$ \pause
+a) $E[aX+b] = a E[X] + b$; \pause
   
-b) $Var[aX+b] = a^2 Var[X]$ \pause
+b) $Var[aX+b] = a^2 Var[X]$. \pause
 
 \vspace{0.2cm}
 
@@ -339,7 +339,7 @@ Demonstração: Seja $\mu=E[X]$, então
 
 ## Exercício:
 
-**Exercício:** O tempo $T$, em minutos, necessário para um operador processar uma peça é uma v.a. com a seguinte função de probabilidade
+**Exercício:** O tempo $T$, em minutos, necessário para um operador processar uma peça é uma v.a. com a seguinte função de probabilidade:
 
 \centering
 
@@ -352,7 +352,7 @@ p(t) & 0.2 & 0.2 & 0.3 & 0.3\\
 
 \raggedright
 
-Por peça produzida esse operador ganha $\$2$ e mais um bonus de $\$0.5$ por minuto inferior a 5 minutos, ou seja, a renda desse operador por peça produzida é calculada de acordo com a seguinte equação
+Por peça produzida esse operador ganha $R\$2$ e mais um bonus de $R\$0.5$ por minuto inferior a 5 minutos, ou seja, a renda desse operador por peça produzida é calculada de acordo com a seguinte equação
 $$
 g(T) = 2 + 0.5 (5-T) = 4.5 - 0.5T.
 $$
@@ -364,7 +364,7 @@ a) a média, a variância e o desvio padrão para o tempo de produção de uma p
 
 b)  a média, a variância e o desvio padrão para a renda por peça produzida \pause
 
-    -  \small Resposta: E[g(T)] = 2.65 $\$$; Var[g(T)] = 0.3025 $\$^2$; DP[g(T)] = 0.55$\$$
+    -  \small Resposta: E[g(T)] = 2.65 $R\$$; Var[g(T)] = 0.3025 $R\$^2$; DP[g(T)] = 0.55$R\$$
   
   
 
@@ -390,11 +390,11 @@ b)
 \small
 $$
 \begin{aligned}
-E[g(T)] &= E[ 4.5 - 0.5T ] = 4.5 -0.5*E[T] = 2.65  ~\$
+E[g(T)] &= E[ 4.5 - 0.5T ] = 4.5 -0.5*E[T] = 2.65  ~R\$
 \\
-Var[g(T)] &= Var[ 4.5 - 0.5T ] = (-0.5)^2*Var[T] = 0.3025 ~\$^2
+Var[g(T)] &= Var[ 4.5 - 0.5T ] = (-0.5)^2*Var[T] = 0.3025 ~R\$^2
 \\
-DP[g(T)] &= \sqrt{Var[g(T)]} = \sqrt{0.3025 } = 0.55 ~\$
+DP[g(T)] &= \sqrt{Var[g(T)]} = \sqrt{0.3025 } = 0.55 ~R\$
 \end{aligned}
 $$
 
@@ -500,7 +500,9 @@ c) Calcule $P[X > 2.5]$ e $P[2 < X \leq 5]$
 
 \small
 
-**Def.:** Uma v.a. discreta X que assume os possíveis valores $0$ e $1$, tem distribuição de probabilidade **Bernoulli**. O resultado 1 é atribuido para o sucesso de um experimento e o resultado 0 para o fracasso do experimento. A letra "p" é utilizada para denotar a probabilidade do sucesso, ou seja, $P[X=1]=p$ e $P[X=0]=1-p$. \pause
+\textbf{Def.:} Uma variável aleatória discreta $X$, que pode assumir apenas os valores $0$ ou $1$, segue uma distribuição \textbf{Bernoulli}. O valor $1$ representa o sucesso de um experimento, enquanto o valor $0$ representa o fracasso. A letra $"p"$ é utilizada para denotar a probabilidade do sucesso, ou seja, $P[X=1]=p$ e $P[X=0]=1-p$
+
+\pause
 
 - \small Notação: $$X \sim Bernoulli(p)$$ \pause
 
@@ -520,7 +522,7 @@ Var[X] =  p(1-p)
 $$ 
 
 
-## Bernoulli
+## Gráficos da distribuição de probabilidade da Bernoulli
 
 ```{r, include=T}
 
