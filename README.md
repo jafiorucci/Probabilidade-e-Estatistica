@@ -20,19 +20,19 @@ Você pode **usar**, **modificar** e **compartilhar** o material, desde que forn
 
 ## Aulas
 
-- Unidade I - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20I/Unidade_I_Introducao.pdf
+- Unidade I - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20I/Unidade_I_Introducao.pdf)
 
-- Unidade II - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20II/Unidade_II.pdf
+- Unidade II - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20II/Unidade_II.pdf)
 
-- Unidade III - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20III/Unidade_III.pdf
+- Unidade III - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20III/Unidade_III.pdf)
 
-- Unidade IV - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20IV/Unidade_IV.pdf
+- Unidade IV - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20IV/Unidade_IV.pdf)
 
 - Unidade V 
-  - Parte 1 - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf
-  - Parte 2 - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf
+  - Parte 1 - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf)
+  - Parte 2 - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf)
 
-- Unidade VI - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VI/Unidade_VI.pdf
+- Unidade VI - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VI/Unidade_VI.pdf)
 
-- Unidade VII - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VII/Unidade_VII.pdf
+- Unidade VII - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VII/Unidade_VII.pdf)
 
