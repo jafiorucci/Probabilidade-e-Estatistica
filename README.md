@@ -17,3 +17,22 @@ Este repositório está licenciado sob a licença [Creative Commons Attribution 
 Você pode **usar**, **modificar** e **compartilhar** o material, desde que forneça o devido crédito ao autor original.
 
 ---
+
+## Aulas
+
+- Unidade I - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20I/Unidade_I_Introducao.pdf
+
+- Unidade II - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20II/Unidade_II.pdf
+
+- Unidade III - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20III/Unidade_III.pdf
+
+- Unidade IV - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20IV/Unidade_IV.pdf
+
+- Unidade V 
+  - Parte 1 - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf
+  - Parte 2 - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf
+
+- Unidade VI - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VI/Unidade_VI.pdf
+
+- Unidade VII - https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VII/Unidade_VII.pdf
+
