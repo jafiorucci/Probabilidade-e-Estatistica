@@ -28,9 +28,9 @@ Você pode **usar**, **modificar** e **compartilhar** o material, desde que forn
 
 - **Unidade IV** - Variáveis Aleatórias Contínuas: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20IV/Unidade_IV.pdf)
 
-- **Unidade V** - Variáveis Aleatórias Bidimensionais e Noções de Amostragem: 
-  - Variáveis Aleatórias Bidimensionais (Parte 1) - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf)
-  - Noções de Amostragem (Parte 2)  - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf)
+- **Unidade V** 
+  - Variáveis Aleatórias Bidimensionais (Parte 1): [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf)
+  - Noções de Amostragem (Parte 2): [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf)
 
 - **Unidade VI** - Estimação: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VI/Unidade_VI.pdf)
 
