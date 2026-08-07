@@ -36,3 +36,4 @@ Você pode **usar**, **modificar** e **compartilhar** o material, desde que forn
 
 - Unidade VII - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VII/Unidade_VII.pdf)
 
+Os slides sem pause estão disponíveis na pasta [Aulas - sem pause](https://github.com/jafiorucci/Probabilidade-e-Estatistica/tree/main/Aulas%20-%20sem%20pause), sendo uma melhor opção para impressão.
