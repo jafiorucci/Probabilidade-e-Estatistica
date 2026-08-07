@@ -20,20 +20,20 @@ Você pode **usar**, **modificar** e **compartilhar** o material, desde que forn
 
 ## Aulas
 
-- Unidade I - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20I/Unidade_I_Introducao.pdf)
+- **Unidade I** - Análise Descritiva de Dados (apenas uma breve introdução): [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20I/Unidade_I_Introducao.pdf)
 
-- Unidade II - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20II/Unidade_II.pdf)
+- **Unidade II** - Cálculo de Probabilidades: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20II/Unidade_II.pdf)
 
-- Unidade III - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20III/Unidade_III.pdf)
+- **Unidade III** - Variáveis Aleatórias Discretas: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20III/Unidade_III.pdf)
 
-- Unidade IV - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20IV/Unidade_IV.pdf)
+- **Unidade IV** - Variáveis Aleatórias Contínuas: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20IV/Unidade_IV.pdf)
 
-- Unidade V 
-  - Parte 1 - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf)
-  - Parte 2 - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf)
+- **Unidade V** - Variáveis Aleatórias Bidimensionais e Noções de Amostragem: 
+  - Variáveis Aleatórias Bidimensionais (Parte 1) - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_I.pdf)
+  - Noções de Amostragem (Parte 2)  - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20V/Unidade_V_Parte_II.pdf)
 
-- Unidade VI - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VI/Unidade_VI.pdf)
+- **Unidade VI** - Estimação: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VI/Unidade_VI.pdf)
 
-- Unidade VII - [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VII/Unidade_VII.pdf)
+- **Unidade VII** - Testes de Hipóteses: [link](https://github.com/jafiorucci/Probabilidade-e-Estatistica/blob/main/Unidade%20VII/Unidade_VII.pdf)
 
-Os slides sem pause estão disponíveis na pasta [Aulas - sem pause](https://github.com/jafiorucci/Probabilidade-e-Estatistica/tree/main/Aulas%20-%20sem%20pause), sendo uma melhor opção para impressão.
+Os slides **sem pause** estão disponíveis na pasta [Aulas - sem pause](https://github.com/jafiorucci/Probabilidade-e-Estatistica/tree/main/Aulas%20-%20sem%20pause), sendo uma melhor opção para impressão.
